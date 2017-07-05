@@ -2,6 +2,7 @@
 var gulp = require('gulp');
 //这样的话 其他的模块可以直接使用 $ 符号来引入
 var $ = require('gulp-load-plugins')();
+//模块化，应用
 var fileinclude = require('gulp-file-include');
 var open = require('open');
 
@@ -26,7 +27,7 @@ gulp.task('lib',function(){
 });
 //将 html 拷贝到 devPath prdPath中
 gulp.task('html',function(){
-    gulp.src(app.srcPath + '**/*.html')
+    gulp.src([app.srcPath + 'index.html',app.srcPath + 'pages/**/*.html'])
     .pipe(fileinclude({
           prefix: '@@',
           basepath: '@file'
