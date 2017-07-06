@@ -57,7 +57,7 @@ gulp.task('less',function(){
 // 拷贝 js 文件  将所有的源文件中的js 文件整合成index.js 然后拷贝过去
 gulp.task('script',function(){
     gulp.src(app.srcPath + 'script/**/*.js')
-    .pipe($.concat('index.js'))
+    // .pipe($.concat('index.js'))
     .pipe(gulp.dest(app.devPath + 'js'))
     .pipe($.uglify())
     .pipe(gulp.dest(app.prdPath + 'js'))

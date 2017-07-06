@@ -1,0 +1,1 @@
+$(function(){$(".small-flex__item").on("click",function(){var l=$(this).index();$(".small-flex__item>.small-flex").removeClass("active"),$(this).find(".small-flex").addClass("active"),$(".tabs>.tab-com").removeClass("active").eq(l).addClass("active")});var l=new DialogFx("#smalltip");$(".smalltip").on("click",function(){l.toggle()})});
