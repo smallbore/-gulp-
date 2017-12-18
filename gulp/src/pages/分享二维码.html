@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="zh-cmn-Hans">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+	<meta name="format-detection" content="telephone=no, address=no, email=no">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="x5-orientation" content="portrait">
+	<title>分享二维码</title>
+	<!-- 需支持动态rem -->
+	<script src="js/comm.js"></script>
+	<link href="lib/weui/weui.min.css" rel="stylesheet">
+	<link href="lib/jquery-weui/jquery-weui.min.css" rel="stylesheet">
+	<link href="lib/reset/reset.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<div class="small_page">
+	<!--头部 -->
+	<div class="small_head whitehd">
+		<a href="javascript:history.back();" class="go-back"></a>
+		<div class="head-title">分享二维码</div>
+		<div class="tool-box"><img src="images/amore3.png" style="width:.9rem;"></div>
+	</div>
+	<!-- 页面主体 -->
+	<div class="small_body" style="background:#fff">
+		<div class="fximg-box">
+			<img src="images/fxbg00.jpg">
+			<div class="weui-cells no-end fximg-cells">
+				<div class="weui-cell no-before">				
+					<div class="weui-cell__bd">
+						<div class="bag-btn">
+							<a href="#" class="small-btn zpcol">转发到群聊</a>
+						</div>
+						<div class="bag-btn" style="padding-top:.2rem;">
+							<a href="#" class="small-btn" id="pt1">生成朋友圈分享图</a>
+						</div>
+						<div class="bag-btn tc" style="padding-top:.2rem;">
+							<a href="#" class="fcblue">我也试一试</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		
+	</div>
+	 
+	
+</div>
+
+
+</body>
+<script src="lib/jquery/jquery-2.1.4.min.js"></script>
+<script src="lib/jquery-weui/jquery-weui.min.js"></script>
+<script src="lib/jquery-weui/swiper.min.js"></script>
+<script>
+	var pb1 = $.photoBrowser({
+        items: [
+          "images/fxbg00.jpg"
+        ],
+        onOpen: function() {
+          console.log("onOpen", this);
+        },
+        onClose: function() {
+          console.log("onClose", this);
+        }
+      });
+      $("#pt1").click(function() {
+        pb1.open();
+      });
+</script>
+
+</html>
