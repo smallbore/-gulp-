@@ -29,7 +29,7 @@ npm -v查看npm 的安装情况.
 
 #### 项目结构
 
-bower_components : 这个文件下边放的是 通过bower安装的第三方的js等。
+lib : 这个文件下边放的是 通过bower安装的第三方的js等。
 
 build : 项目整合目录，一般在这里整合所有的代码，不压缩。
 
